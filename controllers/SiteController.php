@@ -25,22 +25,22 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::class,
-                'only' => ['logout', 'signup', 'index'], // Add 'index' to the list of actions
+                'only' => ['logout', 'signup', 'index'], 
                 'rules' => [
                     [
                         'actions' => ['signup'],
                         'allow' => true,
-                        'roles' => ['?'], // Allow guests to access signup
+                        'roles' => ['?'], 
                     ],
                     [
                         'actions' => ['logout'],
                         'allow' => true,
-                        'roles' => ['@'], // Allow authenticated users to logout
+                        'roles' => ['@'], 
                     ],
                     [
                         'actions' => ['index'],
                         'allow' => true,
-                        'roles' => ['@'], // Only allow authenticated users to access index
+                        'roles' => ['@'], 
                     ],
                 ],
             ],
